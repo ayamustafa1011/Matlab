@@ -1,0 +1,43 @@
+while true;
+    
+%rectangle
+x=[30,30,26,26,24,24,20,20,30];
+y=[45,15,15,5,5,15,15,45,45];
+plot(x,y);
+fill(x,y,'k');
+hold on;
+
+%red circle
+r = 3;
+theta = 0:0.1:360;
+plot(r*cosd(theta)+25,r*sind(theta)+40);
+fill(r*cosd(theta)+25,r*sind(theta)+40,'r')
+pause(2)
+fill(r*cosd(theta)+25,r*sind(theta)+40,'w')
+hold on;
+
+%yellow circle
+r = 3;
+theta = 0:0.1:360;
+plot(r*cosd(theta)+25,r2*sind(theta2)+30);
+fill(r2*cosd(theta2)+25,r2*sind(theta2)+30,'y')
+pause(2)
+fill(r2*cosd(theta2)+25,r2*sind(theta2)+30,'w')
+hold on;
+
+%green circle
+r3 = 3;
+theta3 = 0:0.1:360;
+plot(r3*cosd(theta3)+25,r3*sind(theta3)+20);
+fill(r3*cosd(theta3)+25,r3*sind(theta3)+20,'g')
+pause(2)
+fill(r3*cosd(theta3)+25,r3*sind(theta3)+20,'w')
+hold on;
+
+xlim([0 50]);
+ylim([0 50]);
+
+xlabel('x axis');
+ylabel('y axis');
+
+end
