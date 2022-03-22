@@ -1,0 +1,29 @@
+function RTW_rtwnameSIDMap() {
+	this.rtwnameHashMap = new Array();
+	this.sidHashMap = new Array();
+	this.rtwnameHashMap["<Root>"] = {sid: "session1task1"};
+	this.sidHashMap["session1task1"] = {rtwname: "<Root>"};
+	this.rtwnameHashMap["<Root>/In1"] = {sid: "session1task1:5"};
+	this.sidHashMap["session1task1:5"] = {rtwname: "<Root>/In1"};
+	this.rtwnameHashMap["<Root>/In2"] = {sid: "session1task1:7"};
+	this.sidHashMap["session1task1:7"] = {rtwname: "<Root>/In2"};
+	this.rtwnameHashMap["<Root>/Add"] = {sid: "session1task1:1"};
+	this.sidHashMap["session1task1:1"] = {rtwname: "<Root>/Add"};
+	this.rtwnameHashMap["<Root>/Divide"] = {sid: "session1task1:4"};
+	this.sidHashMap["session1task1:4"] = {rtwname: "<Root>/Divide"};
+	this.rtwnameHashMap["<Root>/Multiply"] = {sid: "session1task1:3"};
+	this.sidHashMap["session1task1:3"] = {rtwname: "<Root>/Multiply"};
+	this.rtwnameHashMap["<Root>/Subtract"] = {sid: "session1task1:2"};
+	this.sidHashMap["session1task1:2"] = {rtwname: "<Root>/Subtract"};
+	this.rtwnameHashMap["<Root>/Out1"] = {sid: "session1task1:6"};
+	this.sidHashMap["session1task1:6"] = {rtwname: "<Root>/Out1"};
+	this.rtwnameHashMap["<Root>/Out2"] = {sid: "session1task1:14"};
+	this.sidHashMap["session1task1:14"] = {rtwname: "<Root>/Out2"};
+	this.rtwnameHashMap["<Root>/Out3"] = {sid: "session1task1:15"};
+	this.sidHashMap["session1task1:15"] = {rtwname: "<Root>/Out3"};
+	this.rtwnameHashMap["<Root>/Out4"] = {sid: "session1task1:16"};
+	this.sidHashMap["session1task1:16"] = {rtwname: "<Root>/Out4"};
+	this.getSID = function(rtwname) { return this.rtwnameHashMap[rtwname];}
+	this.getRtwname = function(sid) { return this.sidHashMap[sid];}
+}
+RTW_rtwnameSIDMap.instance = new RTW_rtwnameSIDMap();
